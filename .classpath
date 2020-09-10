@@ -5,5 +5,8 @@
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-databind-2.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-annotations-2.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-core-2.11.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jfreechart-1.0.19.zip"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/pleiades-4.8.0-java-win-64bit-jre_20180923/pleiades/workspace/kitamuralab/jcommon-1.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/pleiades-4.8.0-java-win-64bit-jre_20180923/pleiades/workspace/kitamuralab/jfreechart-1.0.19-demo.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

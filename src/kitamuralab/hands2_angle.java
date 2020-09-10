@@ -44,7 +44,7 @@ public class hands2_angle extends JPanel{
 		try {
 			//JsonNode node = mapper.readTree(files[n]); //Jsonファイルの読み込み
 			JsonNode node = mapper.readTree(files[n]); //ファイルの読み込み
-			System.out.println("骨格座標の出力");
+			//System.out.println("骨格座標の出力");
 			double born_x[][]; //x座標を格納するための配列
 			double born_y[][]; //y座標を格納するための配列
 			born_x = new double[100][25]; //
@@ -61,21 +61,21 @@ public class hands2_angle extends JPanel{
 					double point = node.get("people").get(k).get("pose_keypoints_2d").get(i).asDouble();
 					born_x[k][x] = point; //配列に骨格のx座標を格納
 					
-					System.out.println();
+					//System.out.println();
 					
 					if(x0 < point) {
 						x0=point;
 					}
 					if(x==24) {
-						System.out.println(born_x[k][x]);
+						//System.out.println(born_x[k][x]);
 						break;
 					}
 					else{
-						System.out.print(born_x[k][x]+",");
+						//System.out.print(born_x[k][x]+",");
 						x++;
 					}
 				}
-				System.out.println(x0);
+				//System.out.println(x0);
 				for(int j=1; j<75; j+=3) {
 					double point = node.get("people").get(k).get("pose_keypoints_2d").get(j).asDouble();
 					born_y[k][y] = point; //配列に骨格のy座標を格納
@@ -83,16 +83,16 @@ public class hands2_angle extends JPanel{
 						y0=point;
 					}
 					if(y==24) {
-						System.out.println(born_y[k][y]);
+						//System.out.println(born_y[k][y]);
 						break;
 					}
 					else{
-						System.out.print(born_y[k][y]+",");
+						//System.out.print(born_y[k][y]+",");
 						y++;
 					}
 				}
-				System.out.println(y0);
-				System.out.println();
+				//System.out.println(y0);
+				//System.out.println();
 				double x1 = getWidth();
 				double y1 = getHeight();
 				double x2 = x0/x1;
@@ -101,10 +101,10 @@ public class hands2_angle extends JPanel{
 				double xy;
 				if(num_max>1) {
 					xy = num_max*1.5;
-					System.out.println(xy);
+					//System.out.println(xy);
 				}else {
 					xy = 1;
-					System.out.println(xy);
+					//System.out.println(xy);
 				}
 				if(born_x[k][0]!=0 && born_x[k][1]!=0)
 					{
@@ -178,7 +178,7 @@ public class hands2_angle extends JPanel{
 				if(born_x[k][22]!=0 && born_x[k][24]!=0) g2.draw(new Line2D.Double(born_x[k][22]/xy,born_y[k][22]/xy,born_x[k][24]/xy,born_y[k][24]/xy));
 				
 				
-				System.out.println("角度の出力");
+				//System.out.println("角度の出力");
 				double neck_x = born_x[k][1];
 				double neck_y = born_x[k][1];
 				double rsholder_x = born_x[k][2];
@@ -196,22 +196,32 @@ public class hands2_angle extends JPanel{
 				
 				double cos = p/pp;
 				
-				System.out.println(cos); //cosθ
+				//System.out.println(cos); //cosθ
 				
 				double t = Math.sqrt((a1*a1) + (a2*a2)) / Math.sqrt((b1*b1) + (b2*b2));
 				
 				double tt = Math.acos(t);
-				System.out.println(tt); //ラジアン
+				//System.out.println(tt); //ラジアン
 				
 				double kakudo = Math.toDegrees(tt);
-				System.out.println(kakudo); //角度
+				System.out.println(kakudo); //右肩角度
+				
+				//ObjectMapper mapper = new ObjectMapper();
+		        //String json = mapper.writeValueAsString(kakudo);
+		        //System.out.println(json);
+				
 				
 				k++;
 			}
 		}catch(IOException e) {
 			e.printStackTrace(); //エラー処理
 		}
+		
+		
+		
 	}
+	
+	
 	public static void main(String[] args) {
 		
 		JFrame a = new JFrame();
@@ -220,6 +230,8 @@ public class hands2_angle extends JPanel{
 		a.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		a.setVisible(true);
 	}
+	
+
 }
 
 
