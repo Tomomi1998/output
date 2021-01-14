@@ -19,10 +19,11 @@ public class hads_left_output extends JPanel{
 	double born_x[][] = new double[100][25]; //x座標を格納するための配列
 	double born_y[][] = new double[100][25]; //y座標を格納するための配列
 	//ディレクトリ指定
-	File file =new File("video_json/hands_example_2_ok_result");
+	File file =new File("video_json/2S_open1_result");
 	File files[] = file.listFiles();
 	ObjectMapper mapper = new ObjectMapper();
 	int n=0;
+	int count=0;
 	Timer timer;
 	public hads_left_output() {
 		setOpaque(false);
@@ -39,7 +40,7 @@ public class hads_left_output extends JPanel{
 	}
 	public void paintComponent(Graphics g) {
 		
-		int count=0;
+		
 		
 		Graphics2D g2 = (Graphics2D)g;
 
@@ -214,12 +215,17 @@ public class hads_left_output extends JPanel{
 				
 				if(kakudo<=120) {count++;}
 				
+				//System.out.println(count);
 				
 				k++;
 			}
 			
 			if(count<=10) {
-				System.out.println("右脇が開いています");
+				//System.out.println("左脇が開いています");
+			}
+			
+			else {
+				//System.out.println("手の締め方は、正しい◎");
 			}
 				
 				

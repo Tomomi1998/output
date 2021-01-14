@@ -5,8 +5,20 @@
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-databind-2.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-annotations-2.11.1.jar"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jackson-core-2.11.1.jar"/>
-	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/jfreechart-1.0.19.zip"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/pleiades-4.8.0-java-win-64bit-jre_20180923/pleiades/workspace/kitamuralab/jcommon-1.0.23.jar"/>
 	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/pleiades-4.8.0-java-win-64bit-jre_20180923/pleiades/workspace/kitamuralab/jfreechart-1.0.19-demo.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-examples-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-excelant-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-ooxml-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-ooxml-schemas-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/poi-scratchpad-4.1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/commons-codec-1.13.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/commons-collections4-4.4.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/commons-compress-1.19.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/lib/commons-math3-3.6.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/ooxml-lib/curvesapi-1.06.jar"/>
+	<classpathentry kind="lib" path="C:/Users/terasawa/Downloads/poi-bin-4.1.2-20200217/poi-4.1.2/ooxml-lib/xmlbeans-3.1.0.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
