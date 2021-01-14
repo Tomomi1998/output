@@ -21,7 +21,7 @@ public class hands_right_output extends JPanel{
 	double born_x[][] = new double[100][25]; //x座標を格納するための配列
 	double born_y[][] = new double[100][25]; //y座標を格納するための配列
 	//ディレクトリ指定
-	File file =new File("video_json/2S_open1"
+	File file =new File("video_json/2S_close2"
 			+ "_result");
 	File files[] = file.listFiles();
 	ObjectMapper mapper = new ObjectMapper();
@@ -45,6 +45,13 @@ public class hands_right_output extends JPanel{
 	}
 
 	double[] kakudo =new double[files.length];
+	double[] neck_x =new double[files.length];
+	double[] neck_y =new double[files.length];
+	double[] rsholder_x =new double[files.length];
+	double[] rsholder_y =new double[files.length];
+	double[] relbow_x =new double[files.length];
+	double[] relbow_y =new double[files.length];
+
 
 	public void check() {
 		while(n<files.length) {
@@ -58,6 +65,7 @@ public class hands_right_output extends JPanel{
 		for(int m=100; m>=40; m=m-10) {
 			for(int l=0; l<files.length-2; l++) {
 				
+				correct2(l+1,m);
 				correct(l+1,m);
 				
 				//System.out.println(this.kakudo[l]);
@@ -81,7 +89,7 @@ public class hands_right_output extends JPanel{
 		
 		for(int l=0; l<files.length; l++) {
 			//System.out.println(this.kakudo[l]+","+max+","+min);
-			//System.out.println(this.kakudo[l]);
+			//System.out.println(this.kakudo[l]);//確認用
 		}
 		
 		output(max,min);
@@ -95,6 +103,59 @@ public class hands_right_output extends JPanel{
 		if(Math.abs(ave-kakudo[k])>threshold) {
 			//System.out.println(k+","+this.kakudo[k]+","+ave);
 			kakudo[k]=ave;
+				
+		}
+	
+		
+	}
+	
+	void correct2(int k, double threshold) {
+		
+		double ave21=(neck_x[k-1]+neck_x[k+1])/2;
+		
+		if(Math.abs(ave21-neck_x[k])>threshold) {
+			//System.out.println("首x"+k+","+this.neck_x[k]+","+ave21);
+			neck_x[k]=ave21;
+				
+		}
+		
+		double ave22=(neck_y[k-1]+neck_y[k+1])/2;
+		
+		if(Math.abs(ave22-neck_y[k])>threshold) {
+			//System.out.println("首y"+k+","+this.neck_y[k]+","+ave22);
+			neck_y[k]=ave22;
+				
+		}
+		
+		double ave23=(rsholder_x[k-1]+rsholder_x[k+1])/2;
+		
+		if(Math.abs(ave23-rsholder_x[k])>threshold) {
+			//System.out.println("肩x"+k+","+this.rsholder_x[k]+","+ave23);
+			rsholder_x[k]=ave23;
+				
+		}
+		
+		double ave24=(rsholder_y[k-1]+rsholder_y[k+1])/2;
+		
+		if(Math.abs(ave24-rsholder_y[k])>threshold) {
+			//System.out.println("肩y"+k+","+this.rsholder_y[k]+","+ave24);
+			rsholder_y[k]=ave24;
+				
+		}
+		
+		double ave25=(relbow_x[k-1]+relbow_x[k+1])/2;
+		
+		if(Math.abs(ave25-relbow_x[k])>threshold) {
+			//System.out.println("肘x"+k+","+this.relbow_x[k]+","+ave25);
+			relbow_x[k]=ave25;
+				
+		}
+		
+		double ave26=(relbow_y[k-1]+relbow_y[k+1])/2;
+		
+		if(Math.abs(ave26-relbow_y[k])>threshold) {
+			//System.out.println("肘y"+k+","+this.relbow_y[k]+","+ave26);
+			relbow_y[k]=ave26;
 				
 		}
 	
@@ -288,8 +349,19 @@ public class hands_right_output extends JPanel{
 				////////////////////////////////////////////////////////////////
 				//フレームごとの角度を認識
 
+				
+				
+				this.neck_x[n]=neck_x;
+				this.neck_y[n]=neck_y;
+				this.rsholder_x[n]=rsholder_x;
+				this.rsholder_y[n]=rsholder_y;
+				this.relbow_x[n]=relbow_x;
+				this.relbow_y[n]=relbow_y;
+				
+		
 				this.kakudo[n]=kakudo;
-
+				
+				
 				//System.out.println(this.kakudo[n]);
 
 
